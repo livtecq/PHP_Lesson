@@ -1,5 +1,8 @@
 <?php
-$db = new mysqli('localhost:8889', 'root', 'root', 'mydb');
+// データベース接続パーツの共通化
+// $db = new mysqli('localhost:8889', 'root', 'root', 'mydb');
+require('dbconnect.php');
+
 $memos = $db->query('select * from memos order by id desc');
 if (!$memos) {
     die($db->error);
