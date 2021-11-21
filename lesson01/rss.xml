@@ -1,0 +1,1372 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>ともすた</title>
+	<atom:link href="https://tomosta.jp/feed/" rel="self" type="application/rss+xml" />
+	<link>https://tomosta.jp</link>
+	<description>学び。応援コミュニティ</description>
+	<lastBuildDate>Tue, 19 Oct 2021 13:16:22 +0000</lastBuildDate>
+	<language>ja</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>https://tomosta.jp/wp-content/uploads/2020/03/favicon.ico</url>
+	<title>ともすた</title>
+	<link>https://tomosta.jp</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">158407978</site>	<item>
+		<title>もう1つの繰り返し構文 &#8211; for</title>
+		<link>https://tomosta.jp/lessons/php-mysql/2-10/</link>
+		
+		<dc:creator><![CDATA[たにぐち　まこと]]></dc:creator>
+		<pubDate>Tue, 19 Oct 2021 13:16:17 +0000</pubDate>
+				<category><![CDATA[PHP+MySQL（MariaDB） Webサーバーサイドプログラミング入門]]></category>
+		<guid isPermaLink="false">https://tomosta.jp/?p=2328</guid>
+
+					<description><![CDATA[「繰り返し処理するwhile構文」で、次のプログラムを紹介しました。 これは「while」構文を使ったプログラムでしたが、ちょっと冗長に感じます。この程度のプログラムの場合は、もう1つの繰り返し構文である「for」構文を [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>「<a href="https://tomosta.jp/lessons/php-mysql/php2-9/">繰り返し処理するwhile構文</a>」で、次のプログラムを紹介しました。</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;?php
+$i = 1;
+while ($i &lt; 366):
+  echo $i . '日&lt;br>';
+  $i = $i + 1;
+endwhile;
+?></code></pre>
+
+
+
+<p>これは「while」構文を使ったプログラムでしたが、ちょっと冗長に感じます。この程度のプログラムの場合は、もう1つの繰り返し構文である「for」構文を使った方が効率よく書くことができます。</p>
+
+
+
+<p>次のように書き換えてみましょう。</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;?php
+for ($i=1; $i&lt;366; $i=$i+1):
+  echo $i . '&lt;br>';
+endfor;
+?></code></pre>
+
+
+
+<p>これで、先のプログラムと同じように1から365までを画面に表示することができます。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2331" data-permalink="https://tomosta.jp/lessons/php-mysql/2-10/attachment/image-11-10/" data-orig-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/10/image-11.png?fit=1280%2C720&amp;ssl=1" data-orig-size="1280,720" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-11" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/10/image-11.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/10/image-11.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/10/image-11.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2331" srcset="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/10/image-11.png?resize=1024%2C576&amp;ssl=1 1024w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/10/image-11.png?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/10/image-11.png?resize=768%2C432&amp;ssl=1 768w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/10/image-11.png?w=1280&amp;ssl=1 1280w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>for構文は、次のような書式で記述できます。文の中にセミコロンなどが入っている特殊な書き方になります。</p>
+
+
+
+<pre class="wp-block-code"><code>for (初期化; 繰り返し条件; 更新処理)</code></pre>
+
+
+
+<p>このように、3つの処理を並べて記述します。そして、while構文にも実はこの3つの処理はあります。それぞれ、次の通りです。</p>
+
+
+
+<pre class="wp-block-code"><code><meta charset="utf-8">&lt;?php
+$i = 1; // 初期化
+while ($i &lt; 366): // 繰り返し条件
+  echo $i . '日&lt;br>';
+  $i = $i + 1; // 更新
+endwhile;
+?></code></pre>
+
+
+
+<p>そのため、while構文では実際の処理は1行しかなく、他は「決まり文句」の文言だったのです。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2332" data-permalink="https://tomosta.jp/lessons/php-mysql/2-10/attachment/image-12-10/" data-orig-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/10/image-12.png?fit=1280%2C720&amp;ssl=1" data-orig-size="1280,720" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-12" data-image-description="" data-image-caption="" data-medium-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/10/image-12.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/10/image-12.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/10/image-12.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2332" srcset="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/10/image-12.png?resize=1024%2C576&amp;ssl=1 1024w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/10/image-12.png?resize=300%2C169&amp;ssl=1 300w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/10/image-12.png?resize=768%2C432&amp;ssl=1 768w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/10/image-12.png?w=1280&amp;ssl=1 1280w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>これを、1行にまとめてしまうのが「for」構文です。</p>
+
+
+
+<h2>インクリメント・デクリメント</h2>
+
+
+
+<p>ここで、次の部分にも注目しましょう。</p>
+
+
+
+<pre class="wp-block-code"><code><meta charset="utf-8">$i=$i+1</code></pre>
+
+
+
+<p>実は、この部分もさらに短くすることができます。次のように書き換えましょう。</p>
+
+
+
+<pre class="wp-block-code"><code>$i++</code></pre>
+
+
+
+<p>これでも正しく動作します。「++」という演算子が「1を加えて同じ変数に代入しなおす」という動きをします。これを「インクリメント」といい、繰り返し構文などでよく使われます。</p>
+
+
+
+<p>このように、ある変数に計算をして同じ変数に代入しなおすという操作はよく行われ、例えば次のようなプログラムを見てみましょう。</p>
+
+
+
+<pre class="wp-block-code"><code>$i = $i + 5;</code></pre>
+
+
+
+<p>これは、次のように置き換えられます。</p>
+
+
+
+<pre class="wp-block-code"><code>$i += 5;</code></pre>
+
+
+
+<p>このような記述は、引き算・かけ算・割り算にも利用できます。</p>
+
+
+
+<pre class="wp-block-code"><code>$i -= 5;
+$i *= 5;
+$i /= 5;</code></pre>
+
+
+
+<p>そして、足し算と引き算のみ「1を加えて再度代入」や「1を引いて再度代入」というのがよく行われるため、次のような記述ができるようになっています。</p>
+
+
+
+<pre class="wp-block-code"><code>$i++; // 1を加えるインクリメント
+$i--; // 1を引くインクリメント</code></pre>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2328</post-id>	</item>
+		<item>
+		<title>Microsoft EdgeとInternet Explorerってどう違うの？　Chromeの仲間ってどういう事？</title>
+		<link>https://tomosta.jp/blog/edge-vs-ie/</link>
+		
+		<dc:creator><![CDATA[たにぐち　まこと]]></dc:creator>
+		<pubDate>Fri, 15 Oct 2021 05:05:50 +0000</pubDate>
+				<category><![CDATA[ブログ]]></category>
+		<guid isPermaLink="false">https://tomosta.jp/?p=2292</guid>
+
+					<description><![CDATA[2021年に登場したMicrosoftの最新OS『Windows 11』には、標準ウェブブラウザーとして「Microsoft Edge（以下、Edge）」が搭載されています。 Microsoftといえば、長らく「Inte [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>2021年に登場したMicrosoftの最新OS『Windows 11』には、標準ウェブブラウザーとして「Microsoft Edge（以下、Edge）」が搭載されています。</p>
+
+
+
+<p>Microsoftといえば、長らく「Internet Explorer（IE）」というウェブブラウザーをWindowsに搭載していましたが、現在では開発やサポートを終了し、この「Edge」に軸足を移しています。</p>
+
+
+
+<p>では、Microsoft EdgeとMicrosoft Internet Explorerはなにが違うのでしょうか？　さらに、同じEdgeでも実は別のものが存在するのをご存じでしょうか？　ここでは、そんなMicrosoft Edgeの秘密について紹介しましょう。</p>
+
+
+
+<h2>ブラウザーの本体はレンダリングエンジン</h2>
+
+
+
+<p>ここで、IEとEdgeの違いを「ソフトの見た目」とか「アイコンや名前」という部分で語ってしまうとおかしな事になってしまうので、それは無視した上で「ブラウザーとしてなにが違うのか」という部分に着目すると「レンダリングエンジンが違う」というのが結論になります。</p>
+
+
+
+<p>レンダリングエンジンとは、HTMLやCSSなどを解釈してウェブページの画面を作り上げるためのエンジン部分です。このレンダリングエンジンの解釈によって、ウェブページの作り方に違いが出てしまうため、同じHTMLの内容を記述しているにもかかわらず、少しだけ見た目が違うとか、うまく再現されないなどの現象が発生してしまいます。</p>
+
+
+
+<p>実際、以前はレンダリングエンジンを各ブラウザーメーカーが独自に開発していたため、IEと他のブラウザーで見た目が異なるということが頻発していました。</p>
+
+
+
+<p>そこで、Appleは同社のウェブブラウザー「Safari」を開発するときに、レンダリングエンジンを独自に開発するのではなく、すでにオープンソースとして開発が進められていた「WebKit（当時はKHTML）」というエンジンを搭載します。つまり、SafariというブラウザーはWebKitにブラウザーの機能をかぶせただけのものだったのです。</p>
+
+
+
+<p>しかしこれが功を奏し、Safariは開発に苦労することなくウェブの最新技術に追従できるブラウザーとして存在感を強めることになります。</p>
+
+
+
+<h2>WebKit系が世界を制覇</h2>
+
+
+
+<p>その後WebKitは、Googleにも認められ、同社の「Chrome」にも搭載されるようになります。なお、Googleはその後WebKitを改良して「Blink」という別のレンダリングエンジンを開発し、現在はBlinkがベースになってはいるものの、「WebKit系」という意味では同じようなエンジンとなります。</p>
+
+
+
+<p>その後もWebKit系を採用するブラウザーベンダーは次々に登場し、PlayStationなどのゲーム機を始め、新興メーカーが開発するブラウザーなどにも採用されるようになりました。この時点で、レンダリングエンジンとしては次のようなものが残っていました。</p>
+
+
+
+<ul><li>Trident &#8211; Internet Explorerのレンダリングエンジン。Microsoftが開発。</li><li>Gecko &#8211; Firefoxで採用されているレンダリングエンジン。その他いくつかのブラウザーが採用している</li><li>WebKitおよびBlink &#8211; SafariやChrome等で採用され、圧倒的に人気のレンダリングエンジン。</li></ul>
+
+
+
+<p>こうして、IEの肩身が狭くなっていったのです。</p>
+
+
+
+<h2>EdgeHTMLの開発に力を注ぐMicrosoft</h2>
+
+
+
+<p>こうして、WebKit系のブラウザーの人気が上がるにつれ、MicrosoftもようやくTridentに見切りをつけて、新しいレンダリングエンジンとして「EdgeHTML」というエンジンを開発します。そして、IE11に一時搭載された後、新しいブラウザーのとして「Microsoft Edge」を開発します。</p>
+
+
+
+<p>ただ、結論からいえば、このレンダリングエンジンはうまく行かず、「現在のEdge」には搭載されていません。つまり、Microsoft Edgeには正確には2種類あるのです。（EdgeHTMLを搭載したEdgeを「旧Edge」などと呼びます）</p>
+
+
+
+<p>EdgeHTMLを搭載したEdgeは、Windows 10などに搭載されましたが、シェアは上がらずGoogle Chromeに圧倒的な差をつけられてしまいます。そこで2020年、MicrosoftはBlinkをレンダリングエンジンに採用した新しいEdge（これを、Chromium Edgeなどと呼びます）を開発し、現在のWindows 11などに搭載します。</p>
+
+
+
+<p>これにより、現在利用されているブラウザーは、Firefoxを除けばほとんどがWebKit系のブラウザーという事になります。これにより、ウェブ制作者はブラウザーごとの表示の差異をあまり気にせず、ウェブ制作ができるようになったというわけです。</p>
+
+
+
+<p>今後も、WebKitやBlinkの進化に目が離せません。</p>
+
+
+
+<ul><li><a href="https://www.microsoft.com/ja-jp/edge">Microsoft Edge</a></li></ul>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2292</post-id>	</item>
+		<item>
+		<title>JSONデータを読み込もう &#8211; json_decode</title>
+		<link>https://tomosta.jp/lessons/php-mysql/php2-20/</link>
+		
+		<dc:creator><![CDATA[たにぐち　まこと]]></dc:creator>
+		<pubDate>Thu, 30 Sep 2021 11:10:00 +0000</pubDate>
+				<category><![CDATA[PHP+MySQL（MariaDB） Webサーバーサイドプログラミング入門]]></category>
+		<guid isPermaLink="false">https://tomosta.jp/?p=2140</guid>
+
+					<description><![CDATA[XMLに変わって近年非常に良く使われているデータ形式にJSON（JavaScript Object Notation）という形式があります。もともと、JavaScriptのためのデータ形式でしたが、使いやすさなどから他の [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>XMLに変わって近年非常に良く使われているデータ形式にJSON（JavaScript Object Notation）という形式があります。もともと、JavaScriptのためのデータ形式でしたが、使いやすさなどから他のプログラミング言語でも利用できるようになり、PHPにも簡単に扱うためのファンクションが準備されています。</p>
+
+
+
+<h2>JSONとは</h2>
+
+
+
+<p>JSONは、次のような形式から成り立っています。</p>
+
+
+
+<pre class="wp-block-code"><code>{
+  "キー": "値",
+  "キー": &#91;
+    {
+      "キー": "値",
+      "キー": "値"
+    },
+<meta charset="utf-8">    {
+      "キー": "値",
+      "キー": "値"
+    }
+  ]
+}</code></pre>
+
+
+
+<p>キーと値のセットになっているため、各データを扱いやすいという点はXMLと似ていますが、XMLのようにタグ名や終了タグがないため、ファイルサイズを抑えることができます。</p>
+
+
+
+<h2>JSONファイルを準備しよう</h2>
+
+
+
+<p>まずは、JSONファイルを準備しましょう。ここでは、次のページからJSONのサンプルをダウンロードします。</p>
+
+
+
+<ul><li><a href="https://tomosta.jp/feed/json">https://tomosta.jp/feed/json</a></li></ul>
+
+
+
+<p>Cmd+S（Ctrl+S）を押してファイルを保存したら、てきとうな場所に「feed.json」などのファイル名で保存しましょう。そしたら、JSONファイルと同じ場所に「sample18.php」という名前のPHPファイルを作成します。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2142" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-20/attachment/image-61-2/" data-orig-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-61.png?fit=1280%2C720&amp;ssl=1" data-orig-size="1280,720" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-61" data-image-description="" data-image-caption="" data-medium-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-61.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-61.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-61.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2142" srcset="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-61.png?resize=1024%2C576&amp;ssl=1 1024w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-61.png?resize=300%2C169&amp;ssl=1 300w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-61.png?resize=768%2C432&amp;ssl=1 768w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-61.png?w=1280&amp;ssl=1 1280w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>そしたら、まずはJSONファイルを読み込みます。これには、通常のテキストファイルなどと同様に<code>file_get_contents</code>を利用します。</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;?php
+$file = file_get_contents('feed.json');</code></pre>
+
+
+
+<p>そしたら、<code>$file</code>にJSONファイルの内容が入るので、これを<code>json_decode</code>を使って分解します。</p>
+
+
+
+<pre class="wp-block-code"><code>$json = json_decode($file);</code></pre>
+
+
+
+<p>これで、JSON内の要素を取り出すことができます。例えば、次のようなJSONデータがあったとしましょう。</p>
+
+
+
+<pre class="wp-block-code"><code>{
+  ...
+  "title": "¥u3068¥u3082¥u3059¥u305f",
+  ...
+}</code></pre>
+
+
+
+<p>この場合、<code>title</code>というキーを使って、次のようにして取り出すことができます。画面に表示してみましょう。</p>
+
+
+
+<pre class="wp-block-code"><code>$echo $json-&gt;title;</code></pre>
+
+
+
+<p>これで、画面にはタイトルが表示されます。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2144" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-20/attachment/image-63-2/" data-orig-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-63.png?fit=1280%2C720&amp;ssl=1" data-orig-size="1280,720" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-63" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-63.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-63.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-63.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2144" srcset="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-63.png?resize=1024%2C576&amp;ssl=1 1024w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-63.png?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-63.png?resize=768%2C432&amp;ssl=1 768w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-63.png?w=1280&amp;ssl=1 1280w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>なお、「¥u3068」などは実際には日本語文字ですが、ここではエスケープ処理というのがされていて、一文字ごとにコードになっています。<code>json_decode</code>を利用したタイミングで日本語文字に戻す事ができます。</p>
+
+
+
+<h2>配列を処理しよう</h2>
+
+
+
+<p>JSONには、次のように複数の要素を含めることができます。</p>
+
+
+
+<pre class="wp-block-code"><code>{
+  "items": &#91;
+    {
+      "id": "...",
+      "title": "..."
+    },
+    {
+      "id": "...",
+      "title": "..."
+    }
+  ]
+}</code></pre>
+
+
+
+<p>この場合、次のようにPHPの配列として取り出すことができます。</p>
+
+
+
+<pre class="wp-block-code"><code>echo $json-&gt;items&#91;0]-&gt;title;</code></pre>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2145" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-20/attachment/image-64-2/" data-orig-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-64.png?fit=1280%2C720&amp;ssl=1" data-orig-size="1280,720" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-64" data-image-description="" data-image-caption="" data-medium-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-64.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-64.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-64.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2145" srcset="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-64.png?resize=1024%2C576&amp;ssl=1 1024w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-64.png?resize=300%2C169&amp;ssl=1 300w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-64.png?resize=768%2C432&amp;ssl=1 768w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-64.png?w=1280&amp;ssl=1 1280w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>そのため、この配列を<code>foreach</code>構文などを使って繰り返し処理する事ができます。次のようにして、すべてのタイトルをリストに出力してみましょう。</p>
+
+
+
+<pre class="wp-block-code"><code>...
+foreach ($json-&gt;items as $item):
+?&gt;
+・&lt;a href="&lt;?php echo $item-&gt;url; ?&gt;"&gt;&lt;?php echo $item-&gt;title; ?&gt;&lt;/a&gt;&lt;br&gt;
+&lt;?php
+endforeach;
+?&gt;</code></pre>
+
+
+
+<p>次のように、リンク付きのタイトルが一覧されます。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2147" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-20/attachment/image-65-2/" data-orig-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-65.png?fit=1280%2C720&amp;ssl=1" data-orig-size="1280,720" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-65" data-image-description="" data-image-caption="" data-medium-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-65.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-65.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-65.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2147" srcset="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-65.png?resize=1024%2C576&amp;ssl=1 1024w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-65.png?resize=300%2C169&amp;ssl=1 300w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-65.png?resize=768%2C432&amp;ssl=1 768w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/08/image-65.png?w=1280&amp;ssl=1 1280w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>こうして、JSONデータを処理してPHPの変数や配列として扱うことができます。</p>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2140</post-id>	</item>
+		<item>
+		<title>繰り返し処理するwhile構文</title>
+		<link>https://tomosta.jp/lessons/php-mysql/php2-9/</link>
+		
+		<dc:creator><![CDATA[たにぐち　まこと]]></dc:creator>
+		<pubDate>Mon, 13 Sep 2021 15:47:50 +0000</pubDate>
+				<category><![CDATA[PHP+MySQL（MariaDB） Webサーバーサイドプログラミング入門]]></category>
+		<guid isPermaLink="false">https://tomosta.jp/?p=2256</guid>
+
+					<description><![CDATA[例えば、次のように画面に1から数字を順番に出力したい時などに、すべて手で記述するのは大変です。 これをプログラムで出力するためには、まず変数を準備して最初の数字を代入し、画面に表示しましょう。 そして、次の数字を出力する [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>例えば、次のように画面に1から数字を順番に出力したい時などに、すべて手で記述するのは大変です。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2257" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-9/attachment/image-32-5/" data-orig-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-32.png?fit=1280%2C720&amp;ssl=1" data-orig-size="1280,720" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-32" data-image-description="" data-image-caption="" data-medium-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-32.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-32.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-32.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2257" srcset="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-32.png?resize=1024%2C576&amp;ssl=1 1024w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-32.png?resize=300%2C169&amp;ssl=1 300w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-32.png?resize=768%2C432&amp;ssl=1 768w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-32.png?w=1280&amp;ssl=1 1280w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>これをプログラムで出力するためには、まず変数を準備して最初の数字を代入し、画面に表示しましょう。</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;?php
+$i = 1;
+echo $i . '&lt;br&gt;';
+?&gt;</code></pre>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2258" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-9/attachment/image-33-5/" data-orig-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-33.png?fit=1280%2C720&amp;ssl=1" data-orig-size="1280,720" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-33" data-image-description="" data-image-caption="" data-medium-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-33.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-33.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-33.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2258" srcset="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-33.png?resize=1024%2C576&amp;ssl=1 1024w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-33.png?resize=300%2C169&amp;ssl=1 300w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-33.png?resize=768%2C432&amp;ssl=1 768w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-33.png?w=1280&amp;ssl=1 1280w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>そして、次の数字を出力するには今の変数に1を加えて、これをまた画面に表示するということの繰り返しです。</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;?php
+$i = 1;
+echo $i . '&lt;br&gt;';
+
+$i = $i + 1;
+echo $i . '&lt;br&gt;';
+?&gt;</code></pre>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2259" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-9/attachment/image-34-4/" data-orig-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-34.png?fit=1280%2C720&amp;ssl=1" data-orig-size="1280,720" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-34" data-image-description="" data-image-caption="" data-medium-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-34.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-34.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-34.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2259" srcset="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-34.png?resize=1024%2C576&amp;ssl=1 1024w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-34.png?resize=300%2C169&amp;ssl=1 300w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-34.png?resize=768%2C432&amp;ssl=1 768w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-34.png?w=1280&amp;ssl=1 1280w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>では、これを「繰り返し構文」を使って、連続して出力できるようにしましょう。次のように変更します。</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;?php
+$i = 1;
+echo $i . '&lt;br&gt;';
+
+while ($i &lt; 366):
+  $i = $i + 1;
+  echo $i . '&lt;br&gt;';
+endwhile;</code></pre>
+
+
+
+<p>これで画面を表示すると、1から366までの数字が連続して表示されます。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2260" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-9/attachment/image-35-4/" data-orig-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-35.png?fit=1280%2C720&amp;ssl=1" data-orig-size="1280,720" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-35" data-image-description="" data-image-caption="" data-medium-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-35.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-35.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-35.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2260" srcset="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-35.png?resize=1024%2C576&amp;ssl=1 1024w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-35.png?resize=300%2C169&amp;ssl=1 300w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-35.png?resize=768%2C432&amp;ssl=1 768w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-35.png?w=1280&amp;ssl=1 1280w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>ここで利用しているのが<code>while</code>構文です。次のように記述します。</p>
+
+
+
+<pre class="wp-block-code"><code>while (繰り返す条件):
+  繰り返す処理
+endwhile;</code></pre>
+
+
+
+<p>「繰り返す条件」には、不等号などを使うことができ、例えばここでは「$i」という変数の内容が「366」という数字よりも小さい（&lt;）間、繰り返すという条件になります。</p>
+
+
+
+<p>「$i」は最初は1なのでこの場合、while構文の中にある「繰り返す処理」が行われます。ここでは、次のプログラムが実行されます。</p>
+
+
+
+<pre class="wp-block-code"><code>$i = $i + 1;
+echo $i . '&lt;br&gt;';</code></pre>
+
+
+
+<p>変数の内容に1を加えて画面に表示します。これによって、2が表示されます。そしたら、再びwhile構文の条件に戻ります。</p>
+
+
+
+<p>こうして、1を加えながら「$i」が365になるまで繰り返されます。365になると、最後に1を加えて366を画面に表示した後、条件から外れてしまいます。これによって、while構文が終わるというしくみです。</p>
+
+
+
+<h2>無限ループ・永久ループに注意</h2>
+
+
+
+<p>while構文を利用する時は、条件は必ずいつか終わるものにしなければなりません。例えば、次のように条件を「$iが0より大きい間」としてしまうと、ループが終わらなくなってしまいます。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2263" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-9/attachment/image-36-4/" data-orig-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-36.png?fit=1280%2C720&amp;ssl=1" data-orig-size="1280,720" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-36" data-image-description="" data-image-caption="" data-medium-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-36.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-36.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-36.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2263" srcset="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-36.png?resize=1024%2C576&amp;ssl=1 1024w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-36.png?resize=300%2C169&amp;ssl=1 300w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-36.png?resize=768%2C432&amp;ssl=1 768w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-36.png?w=1280&amp;ssl=1 1280w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>これは、「$i」は1ずつ加えられていくため、0よりも小さくなることはあり得ません。すると、ループは終わることなく1が加えられていってしまうため、終わらなくなってしまうと言うわけです。</p>
+
+
+
+<p><code>while</code>構文を利用する場合は、条件の作り方に気をつけましょう。</p>
+
+
+
+<h2>プログラムを改良しよう</h2>
+
+
+
+<p>先のプログラムは、動作としては正しいのですが<code>echo</code>が2箇所に分かれてしまっていて、あまりきれいなプログラムとは言えません。できるだけ、処理は<code>while</code>構文の中にまとめてしまう方がよいでしょう。次のように変更しましょう。</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;?php
+$i = 1;
+while ($i &lt; 366):
+  echo $i . '日&lt;br&gt;';
+  $i = $i + 1;
+endwhile;
+?&gt;</code></pre>
+
+
+
+<p>1を加える前に<code>echo</code>で画面出力をしています。これによって、1から順番に画面に表示されるという具合です。こちらのプログラムの方がよいでしょう。</p>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2256</post-id>	</item>
+		<item>
+		<title>変数を使おう</title>
+		<link>https://tomosta.jp/lessons/php-mysql/php2-8/</link>
+		
+		<dc:creator><![CDATA[たにぐち　まこと]]></dc:creator>
+		<pubDate>Fri, 10 Sep 2021 14:04:03 +0000</pubDate>
+				<category><![CDATA[PHP+MySQL（MariaDB） Webサーバーサイドプログラミング入門]]></category>
+		<guid isPermaLink="false">https://tomosta.jp/?p=2246</guid>
+
+					<description><![CDATA[次のようなプログラムを作成してみましょう。 すると、画面には足し算の結果が次のように表示されます。 ここで準備した$sumを「変数」といいます。計算結果などを一時的に保存しておいたり、同じ内容を何度も利用したいときに利用 [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>次のようなプログラムを作成してみましょう。</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;?php
+$sum = 100+1050+200;
+echo $sum;
+?></code></pre>
+
+
+
+<p>すると、画面には足し算の結果が次のように表示されます。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2247" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-8/attachment/image-29-5/" data-orig-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-29.png?fit=1280%2C720&amp;ssl=1" data-orig-size="1280,720" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-29" data-image-description="" data-image-caption="" data-medium-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-29.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-29.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-29.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2247" srcset="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-29.png?resize=1024%2C576&amp;ssl=1 1024w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-29.png?resize=300%2C169&amp;ssl=1 300w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-29.png?resize=768%2C432&amp;ssl=1 768w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-29.png?w=1280&amp;ssl=1 1280w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>ここで準備した<code>$sum</code>を「変数」といいます。計算結果などを一時的に保存しておいたり、同じ内容を何度も利用したいときに利用します。</p>
+
+
+
+<p>この記憶する作業を「代入」などと呼びます。</p>
+
+
+
+<p>なお、変数は数字などと同様で両端にシングルクオーテーション記号を入れません。入れると、次のように変数名が表示されてしまいます。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2248" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-8/attachment/image-30-5/" data-orig-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-30.png?fit=1280%2C720&amp;ssl=1" data-orig-size="1280,720" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-30" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-30.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-30.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-30.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2248" srcset="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-30.png?resize=1024%2C576&amp;ssl=1 1024w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-30.png?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-30.png?resize=768%2C432&amp;ssl=1 768w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-30.png?w=1280&amp;ssl=1 1280w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<h2>変数名の付け方</h2>
+
+
+
+<p>PHPでは、変数に「$」記号から始まる名前をつけて管理します。変数名は次のようなルールでつけることができます。</p>
+
+
+
+<ul><li>1文字は文字またはアンダースコアのみ（数字から始まる変数名は使えません）</li><li>2文字目以降は、数字、文字、アンダースコアのみ（ハイフンなどは使えません）</li></ul>
+
+
+
+<p>日本語も変数名として使えますが、扱いにくくなったりするので英単語が良いでしょう。</p>
+
+
+
+<h2>変数を再利用しよう</h2>
+
+
+
+<p>先の通り、変数に記憶しておくと、計算の結果を複数回使うときなどに便利です。例えば、次のように消費税込みの金額を表示できるようにしましょう。</p>
+
+
+
+<blockquote class="wp-block-quote"><p>合計金額は、1350円です<br>税込金額は、1485円です</p></blockquote>
+
+
+
+<p>このようなプログラムを作成してみます。先ほどのプログラムを次のように変更してみましょう。</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;?php
+$sum = 100+1050+200;
+?>
+&lt;p>合計金額は、&lt;?php echo $sum; ?>円です&lt;/p>
+&lt;p>税込金額は、&lt;?php echo $sum * 1.1; ?>円です&lt;/p></code></pre>
+
+
+
+<p>このように、<code>$sum</code>という変数に計算結果を記憶しておけば、税抜き金額を表示した後で、1.1をかけて税込金額を求め、それを画面に表示できます。</p>
+
+
+
+<h2>変数名の間違いに注意しよう</h2>
+
+
+
+<p>変数は、代入した後それを使うときは、同じ名前で利用しなければなりません。スペルを間違えてしまうと、次のようにエラーが表示されてしまうので気をつけましょう。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2251" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-8/attachment/image-31-5/" data-orig-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-31.png?fit=1280%2C720&amp;ssl=1" data-orig-size="1280,720" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-31" data-image-description="" data-image-caption="" data-medium-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-31.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-31.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-31.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2251" srcset="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-31.png?resize=1024%2C576&amp;ssl=1 1024w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-31.png?resize=300%2C169&amp;ssl=1 300w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-31.png?resize=768%2C432&amp;ssl=1 768w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-31.png?w=1280&amp;ssl=1 1280w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2246</post-id>	</item>
+		<item>
+		<title>オブジェクトで日付を扱おう</title>
+		<link>https://tomosta.jp/lessons/php-mysql/php2-7/</link>
+		
+		<dc:creator><![CDATA[たにぐち　まこと]]></dc:creator>
+		<pubDate>Thu, 09 Sep 2021 14:21:13 +0000</pubDate>
+				<category><![CDATA[PHP+MySQL（MariaDB） Webサーバーサイドプログラミング入門]]></category>
+		<guid isPermaLink="false">https://tomosta.jp/?p=2232</guid>
+
+					<description><![CDATA[前の記事で、次のようなプログラムを作成しました。 このプログラムによって、プログラムを実行した時刻を表示できますが、このようなプログラムの作り方を「構造化プログラミング」などと呼びます。これは、古くからあるプログラミング [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p><a href="https://tomosta.jp/lessons/php-mysql/%e7%8f%be%e5%9c%a8%e6%99%82%e5%88%bb%e3%82%92%e8%a1%a8%e7%a4%ba%e3%81%97%e3%82%88%e3%81%86-date-date_default_timezone_set/" data-type="post" data-id="2215">前の記事</a>で、次のようなプログラムを作成しました。</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;?php
+date_default_timezone_set('Asia/Tokyo');
+echo '現在は、', date('G時 i分 s秒'), 'です';</code></pre>
+
+
+
+<p>このプログラムによって、プログラムを実行した時刻を表示できますが、このようなプログラムの作り方を「構造化プログラミング」などと呼びます。これは、古くからあるプログラミングの手法で、現在はあまり一般的ではありません。</p>
+
+
+
+<p>現在はそれに変わり「オブジェクト指向プログラミング」と呼ばれる手法が採用されます。PHPは、かなり古いプログラミング言語なので、基本的な作りは構造化プログラミングが採用されています。しかし、その後オブジェクト指向プログラミングも取り入れられ、現在では両方が混在した形になっています。</p>
+
+
+
+<p>先のプログラムも、構造化プログラミングの形でもオブジェクト指向プログラミングの形でも制作することができます。そこで今回は、オブジェクト指向プログラミングで同じプログラムを作成してみましょう。</p>
+
+
+
+<h2>オブジェクトを準備しよう</h2>
+
+
+
+<p>まずは、新しいファイルを作成したら、次のようなプログラムを作成します。</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;?php
+$today = new DateTime();</code></pre>
+
+
+
+<p>これにより、今日の日時を準備した「オブジェクト」というものが準備されます。「DateTime」というのが、オブジェクトの元になるもので「クラス」と呼びます。ここでは、「new」という記述を使って、DateTimeクラスから派生した現在の日時を持ったオブジェクトを作り、これを「$today」という変数に代入しました。この変数を特別に「インスタンス」と呼びます。</p>
+
+
+
+<h2>メソッドを利用しよう</h2>
+
+
+
+<p>では次に、このインスタンスを使って日付を出力してみましょう。次のように書き加えます。</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;?php
+$today = new DateTime();
+echo '現在は、' . $today-&gt;format('G時 i分 s秒') . 'です';
+?&gt;</code></pre>
+
+
+
+<p>これで、同じように現在時刻が表示されました。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2236" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-7/attachment/image-28-5/" data-orig-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-28.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-28" data-image-description="" data-image-caption="" data-medium-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-28.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-28.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-28.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2236" srcset="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-28.png?resize=1024%2C576&amp;ssl=1 1024w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-28.png?resize=300%2C169&amp;ssl=1 300w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-28.png?resize=768%2C432&amp;ssl=1 768w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-28.png?resize=1536%2C864&amp;ssl=1 1536w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-28.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>こちらもタイムゾーンが違う場合は、次のように書き加えるとタイムゾーンを変更できます。</p>
+
+
+
+<pre class="wp-block-code"><code><meta charset="utf-8">&lt;?php
+$today = new DateTime();
+$today-&gt;setTimezone(new DateTimeZone('Asia/Tokyo'));
+echo '現在は、' . $today-&gt;format('G時 i分 s秒') . 'です';
+?&gt;</code></pre>
+
+
+
+<p>これで正しいタイムゾーンで表示されます。</p>
+
+
+
+<p>オブジェクト指向で、現在時刻を取得するには次のように記述します。</p>
+
+
+
+<pre class="wp-block-code"><code>$today-&gt;format('...')</code></pre>
+
+
+
+<p>先ほど準備した<code>$today</code>に「-&gt;」というハイフンと不等号を組み合わせると、その後に「メソッド」というものを記述できるようになります。</p>
+
+
+
+<p>メソッドというのは「機能」といった意味だと考えていただければ良いでしょう。ここでは、<code>format</code>というメソッドを利用して、書式を整えて日時を取得するという意味になります。パラメーターは、先の<code>date</code>ファンクションと同じです。</p>
+
+
+
+<p>オブジェクト指向プログラミングはこのように、まずオブジェクトを準備し、そのオブジェクトが持っているメソッドや後で紹介する「プロパティ」というものを使ってプログラムを作成していくというスタイルです。</p>
+
+
+
+<p>書くものが増えて、若干面倒に感じますが、このように目的別にできる事が分類されているため、分かりやすくプログラムを作成することができます。小規模なプログラムではあまり効率よくありませんが、大規模なプログラムになるほど、効率よく開発することができます。</p>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2232</post-id>	</item>
+		<item>
+		<title>文字列と数式を連結しよう</title>
+		<link>https://tomosta.jp/lessons/php-mysql/php2-6/</link>
+		
+		<dc:creator><![CDATA[たにぐち　まこと]]></dc:creator>
+		<pubDate>Wed, 08 Sep 2021 12:07:15 +0000</pubDate>
+				<category><![CDATA[PHP+MySQL（MariaDB） Webサーバーサイドプログラミング入門]]></category>
+		<guid isPermaLink="false">https://tomosta.jp/?p=2223</guid>
+
+					<description><![CDATA[前の記事で、次のように現在時刻を表示するプログラムを作成しました。 これで、次のように時刻だけが表示されます。 ではこれを「現在は、15時 26分 00秒です」などと前後にメッセージを追加したい場合はどうしたら良いでしょ [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>前の記事で、次のように現在時刻を表示するプログラムを作成しました。</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;?php
+date_default_timezone_set('Asia/Tokyo');
+echo date('G時 i分 s秒');</code></pre>
+
+
+
+<p>これで、次のように時刻だけが表示されます。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2224" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-6/attachment/image-26-5/" data-orig-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-26.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-26" data-image-description="" data-image-caption="" data-medium-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-26.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-26.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-26.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2224" srcset="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-26.png?resize=1024%2C576&amp;ssl=1 1024w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-26.png?resize=300%2C169&amp;ssl=1 300w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-26.png?resize=768%2C432&amp;ssl=1 768w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-26.png?resize=1536%2C864&amp;ssl=1 1536w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-26.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>ではこれを「現在は、15時 26分 00秒です」などと前後にメッセージを追加したい場合はどうしたら良いでしょう？この場合、文字列とファンクションを繋がなければならないため、特別な記号で繋ぐ必要があります。ここで使われるのが「.（ドット）」という記号で、これを「文字列連結」などといいます。</p>
+
+
+
+<h2>文字列連結しよう</h2>
+
+
+
+<p>プログラムを次のように変更します。</p>
+
+
+
+<pre class="wp-block-code"><code>echo '現在は、' . date('G時 i分 s秒') . 'です';</code></pre>
+
+
+
+<p>これで実行すると、次のように前後にメッセージが追加されます。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2225" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-6/attachment/image-27-5/" data-orig-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-27.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-27" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-27.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-27.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-27.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2225" srcset="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-27.png?resize=1024%2C576&amp;ssl=1 1024w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-27.png?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-27.png?resize=768%2C432&amp;ssl=1 768w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-27.png?resize=1536%2C864&amp;ssl=1 1536w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-27.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>「現在は」や「です」というのは「文字列」なので、前後にクオーテーションが記号が必要です。しかし、その間にある<code>date</code>ファンクションにはクオーテーションを記号をつけることができません。</p>
+
+
+
+<p>そのため、必要なものと必要でないものの間にドットを挟んで、連結しているというわけです。</p>
+
+
+
+<h2>echoのパラメーターを利用した指定方法</h2>
+
+
+
+<p>実は、<code>echo</code>を利用する時だけ使える別のテクニックがあります。<code><a href="https://www.php.net/manual/ja/function.echo.php">echo</a></code>のリファレンスを確認すると、パラメーターは次のようになっています。</p>
+
+
+
+<pre class="wp-block-code"><code>echo 文字列1, 文字列2, 文字列3, ...;</code></pre>
+
+
+
+<p>カンマで区切って、いくつでもパラメーターが指定できます。<code>echo</code>はこれを順番に画面に出力していきます。そのため、次のように指定できます。</p>
+
+
+
+<pre class="wp-block-code"><code><meta charset="utf-8">echo '現在は、', date('G時 i分 s秒'), 'です';</code></pre>
+
+
+
+<p>.（ドット）が,（カンマ）に代わっただけですが、これでも同じく動作します。どちらを利用しても良いでしょう。</p>
+
+
+
+<p>とはいえ、カンマで区切れるのは<code>echo</code>の場合だけなので、文字列連結を覚えておくとよいでしょう。</p>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2223</post-id>	</item>
+		<item>
+		<title>現在時刻を表示しよう &#8211; date / date_default_timezone_set</title>
+		<link>https://tomosta.jp/lessons/php-mysql/%e7%8f%be%e5%9c%a8%e6%99%82%e5%88%bb%e3%82%92%e8%a1%a8%e7%a4%ba%e3%81%97%e3%82%88%e3%81%86-date-date_default_timezone_set/</link>
+		
+		<dc:creator><![CDATA[たにぐち　まこと]]></dc:creator>
+		<pubDate>Tue, 07 Sep 2021 13:10:04 +0000</pubDate>
+				<category><![CDATA[PHP+MySQL（MariaDB） Webサーバーサイドプログラミング入門]]></category>
+		<guid isPermaLink="false">https://tomosta.jp/?p=2215</guid>
+
+					<description><![CDATA[コンピューターは、内部に時計を持っているためPHPで現在の時刻を取得できます。ここでは、dateファンクションを使って現在時刻を画面に表示してみましょう。 次のようなプログラムを作成します。 なお、ここではPHPの終了タ [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>コンピューターは、内部に時計を持っているためPHPで現在の時刻を取得できます。ここでは、<code>date</code>ファンクションを使って現在時刻を画面に表示してみましょう。</p>
+
+
+
+<p>次のようなプログラムを作成します。</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;?php
+echo date('G時 i分 s秒');</code></pre>
+
+
+
+<p>なお、ここではPHPの終了タグを省略していますが、これでも正しく動作します。これを実行すると、次のような時刻が表示され、再読み込みする度に時間が更新されます（現在時刻ではない事があります）。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2216" data-permalink="https://tomosta.jp/lessons/php-mysql/%e7%8f%be%e5%9c%a8%e6%99%82%e5%88%bb%e3%82%92%e8%a1%a8%e7%a4%ba%e3%81%97%e3%82%88%e3%81%86-date-date_default_timezone_set/attachment/image-23-5/" data-orig-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-23.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-23" data-image-description="" data-image-caption="" data-medium-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-23.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-23.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-23.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2216" srcset="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-23.png?resize=1024%2C576&amp;ssl=1 1024w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-23.png?resize=300%2C169&amp;ssl=1 300w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-23.png?resize=768%2C432&amp;ssl=1 768w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-23.png?resize=1536%2C864&amp;ssl=1 1536w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-23.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p><code>date</code>ファンクションは、「フォーマット」をパラメーターに指定できます。これは、英文字を1文字に対して日時が割り当てられているというもので、大文字の「G」は「時を24時間制」で、小文字の「i」は分を2桁（1桁の場合は先頭に0を入れる）でといった具合に、取得できます。すべてのパラメーターは、<a href="https://www.php.net/manual/ja/function.date.php" target="_blank" rel="noreferrer noopener">リファレンス</a>をご確認ください。</p>
+
+
+
+<h2>戻り値を画面に表示しよう</h2>
+
+
+
+<p><code>date</code>ファンクションは、それだけを実行しても画面には何の変化もありません。これは、<code>date</code>ファンクションがその結果を「戻り値」という形で取得できるためです。このようなファンクションの戻り値を画面に表示したい場合は、<code>echo</code>と組み合わせて次のように利用します。</p>
+
+
+
+<pre class="wp-block-code"><code><meta charset="utf-8">&lt;?php
+echo date('G時 i分 s秒');</code></pre>
+
+
+
+<p><a href="https://tomosta.jp/lessons/php-mysql/php2-4/" data-type="post" data-id="2195">前回の記事と同様</a>に、<code>echo</code>のパラメーターにクオーテーションをつけてしまうと、そのまま画面に表示されてしまいます。</p>
+
+
+
+<pre class="wp-block-code"><code><meta charset="utf-8">&lt;?php
+echo "date('G時 i分 s秒')";</code></pre>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2217" data-permalink="https://tomosta.jp/lessons/php-mysql/%e7%8f%be%e5%9c%a8%e6%99%82%e5%88%bb%e3%82%92%e8%a1%a8%e7%a4%ba%e3%81%97%e3%82%88%e3%81%86-date-date_default_timezone_set/attachment/image-24-5/" data-orig-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-24.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-24" data-image-description="" data-image-caption="" data-medium-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-24.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-24.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-24.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2217" srcset="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-24.png?resize=1024%2C576&amp;ssl=1 1024w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-24.png?resize=300%2C169&amp;ssl=1 300w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-24.png?resize=768%2C432&amp;ssl=1 768w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-24.png?resize=1536%2C864&amp;ssl=1 1536w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-24.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<h2>タイムゾーンを設定しよう</h2>
+
+
+
+<p>こうして時刻が表示されますが、実際の現在時刻とはずれているかも知れません。これは、時刻には「タイムゾーン」があり、例えば日本の場合は世界標準時から9時間ずれていますが、PHPの標準では世界標準時に設定されてしまっています。</p>
+
+
+
+<p>そこで、タイムゾーンを変更しましょう。これには、<code>date_default_timezone_set</code>ファンクションを利用します。次のようにプログラムを追記しましょう。</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;?php
+date_default_timezone_set('Asia/Tokyo');
+echo date('G時 i分 s秒');</code></pre>
+
+
+
+<p>これで、正しい時間が表示されるようになります。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2219" data-permalink="https://tomosta.jp/lessons/php-mysql/%e7%8f%be%e5%9c%a8%e6%99%82%e5%88%bb%e3%82%92%e8%a1%a8%e7%a4%ba%e3%81%97%e3%82%88%e3%81%86-date-date_default_timezone_set/attachment/image-25-5/" data-orig-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-25.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-25" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-25.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-25.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-25.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2219" srcset="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-25.png?resize=1024%2C576&amp;ssl=1 1024w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-25.png?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-25.png?resize=768%2C432&amp;ssl=1 768w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-25.png?resize=1536%2C864&amp;ssl=1 1536w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-25.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2215</post-id>	</item>
+		<item>
+		<title>計算しよう</title>
+		<link>https://tomosta.jp/lessons/php-mysql/php2-4/</link>
+		
+		<dc:creator><![CDATA[たにぐち　まこと]]></dc:creator>
+		<pubDate>Sun, 05 Sep 2021 15:17:14 +0000</pubDate>
+				<category><![CDATA[PHP+MySQL（MariaDB） Webサーバーサイドプログラミング入門]]></category>
+		<guid isPermaLink="false">https://tomosta.jp/?p=2195</guid>
+
+					<description><![CDATA[例えば、次のようなプログラムを作成してみましょう。 このプログラムを実行すると、次のような結果が表示されます。 126.3333333333 これは、PHPの計算機能を利用して計算を行った結果です。ここで、echoの使い [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>例えば、次のようなプログラムを作成してみましょう。</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;?php
+echo 123+2*5/3;
+?&gt;</code></pre>
+
+
+
+<p>このプログラムを実行すると、次のような結果が表示されます。</p>
+
+
+
+<blockquote class="wp-block-quote"><p>126.3333333333</p></blockquote>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2197" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-4/attachment/image-16-6/" data-orig-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-16.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-16" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-16.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-16.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-16.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2197" srcset="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-16.png?resize=1024%2C576&amp;ssl=1 1024w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-16.png?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-16.png?resize=768%2C432&amp;ssl=1 768w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-16.png?resize=1536%2C864&amp;ssl=1 1536w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-16.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>これは、PHPの計算機能を利用して計算を行った結果です。ここで、<a href="https://tomosta.jp/php-mysql/php2-1/">echoの使い方</a>では表示する内容の前後にシングルクオーテーションを付加すると紹介しました。例えば、次のように変更してみましょう。</p>
+
+
+
+<pre class="wp-block-code"><code><meta charset="utf-8">&lt;?php
+echo '123+2*5/3';
+?&gt;</code></pre>
+
+
+
+<p>すると、今度は画面にはそのまま表示されます。</p>
+
+
+
+<blockquote class="wp-block-quote"><p>123+2*5/3</p></blockquote>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2198" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-4/attachment/image-17-6/" data-orig-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-17.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-17" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-17.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-17.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-17.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2198" srcset="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-17.png?resize=1024%2C576&amp;ssl=1 1024w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-17.png?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-17.png?resize=768%2C432&amp;ssl=1 768w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-17.png?resize=1536%2C864&amp;ssl=1 1536w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-17.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<h2>クオーテーション記号は、文字列かどうかの判別</h2>
+
+
+
+<p>実は、<code>echo</code>にクオーテーション記号をつけるのは、必ず行わなければならないわけではありません。文章などの場合は必ず必要ですが、数字や計算式、変数（後述）などの場合はつけないこともできます。</p>
+
+
+
+<p>ただし、つける場合とつけない場合で処理の内容が変わり、クーテーションをつければそのまま内容が表示されます。つけなかった場合は、計算式などを計算して、その結果だけを表示するというわけです。</p>
+
+
+
+<p>そのため、計算処理を使いたい場合は、クオーテーション記号を省略して指定します。例えば、次の例は1+1の結果である2が画面に表示されます。</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;?php
+echo 1+1;
+?&gt;</code></pre>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2200" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-4/attachment/image-18-6/" data-orig-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-18.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-18" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-18.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-18.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-18.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2200" srcset="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-18.png?resize=1024%2C576&amp;ssl=1 1024w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-18.png?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-18.png?resize=768%2C432&amp;ssl=1 768w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-18.png?resize=1536%2C864&amp;ssl=1 1536w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-18.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<h2>特殊な演算記号</h2>
+
+
+
+<p>計算をするときは、足し算や引き算の記号を使います。これをPHPでは「算術演算子」とか「代数演算子」と呼びます。足し算は「+」、引き算は「-」と算数の記号で同じですが、かけ算とわり算は他の記号を使うので注意が必要です。</p>
+
+
+
+<h3>かけ算</h3>
+
+
+
+<p>かけ算には、「×」の代わりに「*（アスタリスク）」を使います。</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;?php
+echo 10*5;
+?&gt;</code></pre>
+
+
+
+<p>これで、10×5で50が表示されます。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2202" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-4/attachment/image-19-6/" data-orig-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-19.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-19" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-19.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-19.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-19.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2202" srcset="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-19.png?resize=1024%2C576&amp;ssl=1 1024w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-19.png?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-19.png?resize=768%2C432&amp;ssl=1 768w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-19.png?resize=1536%2C864&amp;ssl=1 1536w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-19.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<h3>割り算</h3>
+
+
+
+<p>割り算の記号は「÷」の代わりに「/（スラッシュ）」を利用します。</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;?php
+echo 10/5;
+?&gt;</code></pre>
+
+
+
+<p>これで、10÷5で2が表示されます。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2203" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-4/attachment/image-20-6/" data-orig-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-20.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-20" data-image-description="" data-image-caption="" data-medium-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-20.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-20.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-20.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2203" srcset="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-20.png?resize=1024%2C576&amp;ssl=1 1024w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-20.png?resize=300%2C169&amp;ssl=1 300w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-20.png?resize=768%2C432&amp;ssl=1 768w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-20.png?resize=1536%2C864&amp;ssl=1 1536w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-20.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<h2>演算子の優先順位</h2>
+
+
+
+<p>算数で習ったことですが、足し算とかけ算が一緒にある場合は、かけ算が先に行われます。例えば、次の計算を見ていきましょう。</p>
+
+
+
+<pre class="wp-block-code"><code>123 + 2 × 5 ÷ 3</code></pre>
+
+
+
+<p>この場合、最初の「123 + 2」よりも先に「2 × 5」が計算されます。その後、割り算が計算されて最後に足し算が計算されます。この結果、答えは「126.333」になります。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2206" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-4/attachment/image-21-6/" data-orig-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-21.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-21" data-image-description="" data-image-caption="" data-medium-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-21.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-21.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-21.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2206" srcset="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-21.png?resize=1024%2C576&amp;ssl=1 1024w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-21.png?resize=300%2C169&amp;ssl=1 300w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-21.png?resize=768%2C432&amp;ssl=1 768w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-21.png?resize=1536%2C864&amp;ssl=1 1536w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-21.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>優先順位を変えたい場合は、カッコで囲むのも算数のルールと同じです。次のようにすれば、足し算が先に行われます。</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;?php
+echo (123+2)*5/3;
+?&gt;</code></pre>
+
+
+
+<p>すると、結果は208.333になります。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2207" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-4/attachment/image-22-5/" data-orig-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-22.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-22" data-image-description="" data-image-caption="" data-medium-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-22.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-22.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-22.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2207" srcset="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-22.png?resize=1024%2C576&amp;ssl=1 1024w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-22.png?resize=300%2C169&amp;ssl=1 300w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-22.png?resize=768%2C432&amp;ssl=1 768w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-22.png?resize=1536%2C864&amp;ssl=1 1536w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-22.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>計算結果を画面に表示するだけでは、あまり役に立ちませんが、計算はプログラムの中で非常に良く使われます。慣れていきましょう。</p>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2195</post-id>	</item>
+		<item>
+		<title>エラーを表示できるようにしよう</title>
+		<link>https://tomosta.jp/lessons/php-mysql/php2-3/</link>
+		
+		<dc:creator><![CDATA[たにぐち　まこと]]></dc:creator>
+		<pubDate>Fri, 03 Sep 2021 11:07:48 +0000</pubDate>
+				<category><![CDATA[PHP+MySQL（MariaDB） Webサーバーサイドプログラミング入門]]></category>
+		<guid isPermaLink="false">https://tomosta.jp/?p=2166</guid>
+
+					<description><![CDATA[プログラムの内容を打ち間違えてしまうと、プログラムは正しく動作しません。この時、PHPはプログラムでどのような異常があるかを「エラーメッセージ」という形で伝えてくれます。例えば、次のような間違えたプログラムを作成してみま [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>プログラムの内容を打ち間違えてしまうと、プログラムは正しく動作しません。この時、PHPはプログラムでどのような異常があるかを「エラーメッセージ」という形で伝えてくれます。例えば、次のような間違えたプログラムを作成してみましょう。</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;?php
+  echo 'I'm studying';
+?></code></pre>
+
+
+
+<p>この場合、アポストロフィー（シングルクオーテーション）が<code>echo</code>のパラメーターに指定してしまっているため、正しく動作しません（<a href="https://tomosta.jp/php-mysql/php2-2/" data-type="post" data-id="2003">エスケープシーケンス</a>の処理が必要です）</p>
+
+
+
+<p>しかし、MAMPの標準の設定では次のように、なにが原因なのかが分かりません。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2167" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-3/attachment/image-90/" data-orig-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2167" srcset="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image.png?resize=1024%2C576&amp;ssl=1 1024w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image.png?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image.png?resize=768%2C432&amp;ssl=1 768w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image.png?resize=1536%2C864&amp;ssl=1 1536w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>これは、エラーメッセージが見えてしまうと、そこからセキュリティの脆弱性が見つけられる危険性などがあるため。とはいえ、エラーの原因が分からなければ、開発がスムーズに行えません。</p>
+
+
+
+<p>そこで、MAMPなどの開発環境上ではエラーメッセージを表示させるとよいでしょう。これには、<code>php.ini</code>というファイルを編集します。</p>
+
+
+
+<h2>macOS版MAMPの場合</h2>
+
+
+
+<p>PHPの設定ファイルであるphp.iniは、MAMPで利用しているPHPのバージョンなどによって異なります。そこで、次の手順でphp.iniの場所を探しましょう。</p>
+
+
+
+<p>まずは、MAMPを起動したら右上の「WebStart」ボタンをクリックします。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2168" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-3/attachment/image-1-16/" data-orig-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-1.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-1" data-image-description="" data-image-caption="" data-medium-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-1.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-1.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-1.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2168" srcset="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-1.png?resize=1024%2C576&amp;ssl=1 1024w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-1.png?resize=300%2C169&amp;ssl=1 300w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-1.png?resize=768%2C432&amp;ssl=1 768w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-1.png?resize=1536%2C864&amp;ssl=1 1536w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-1.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>次のようなスタート画面が表示されます。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2169" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-3/attachment/image-2-14/" data-orig-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-2.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-2" data-image-description="" data-image-caption="" data-medium-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-2.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-2.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-2.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2169" srcset="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-2.png?resize=1024%2C576&amp;ssl=1 1024w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-2.png?resize=300%2C169&amp;ssl=1 300w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-2.png?resize=768%2C432&amp;ssl=1 768w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-2.png?resize=1536%2C864&amp;ssl=1 1536w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-2.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>そしたら、「Tools→phpInfo」メニューをクリックします。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2170" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-3/attachment/image-3-12/" data-orig-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-3.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-3" data-image-description="" data-image-caption="" data-medium-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-3.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-3.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-3.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2170" srcset="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-3.png?resize=1024%2C576&amp;ssl=1 1024w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-3.png?resize=300%2C169&amp;ssl=1 300w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-3.png?resize=768%2C432&amp;ssl=1 768w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-3.png?resize=1536%2C864&amp;ssl=1 1536w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-3.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>PHPの各種設定が表示され、この中の「Loaded Configuration File」という設定項目がphp.iniの場所を示しています。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2171" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-3/attachment/image-4-10/" data-orig-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-4.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-4" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-4.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-4.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-4.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2171" srcset="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-4.png?resize=1024%2C576&amp;ssl=1 1024w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-4.png?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-4.png?resize=768%2C432&amp;ssl=1 768w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-4.png?resize=1536%2C864&amp;ssl=1 1536w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-4.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>この場所を、Finderで探してファイルをエディター（VSCode）で開きましょう。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2172" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-3/attachment/image-5-11/" data-orig-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-5.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-5" data-image-description="" data-image-caption="" data-medium-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-5.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-5.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-5.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2172" srcset="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-5.png?resize=1024%2C576&amp;ssl=1 1024w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-5.png?resize=300%2C169&amp;ssl=1 300w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-5.png?resize=768%2C432&amp;ssl=1 768w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-5.png?resize=1536%2C864&amp;ssl=1 1536w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-5.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>ファイルの中には、さまざまな設定が書き込まれているので「編集→検索」メニューでファイル内検索をして「display_errors」というキーワードで検索をしてみましょう。472行目付近に次のような設定が見つかります。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2174" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-3/attachment/image-6-9/" data-orig-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-6.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-6" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-6.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-6.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-6.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2174" srcset="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-6.png?resize=1024%2C576&amp;ssl=1 1024w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-6.png?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-6.png?resize=768%2C432&amp;ssl=1 768w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-6.png?resize=1536%2C864&amp;ssl=1 1536w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-6.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>なお、行頭に「;（セミコロン）」がある行はコメントで設定の内容ではありません。セミコロンがない行を探しましょう。現状、この設定が「Off」になっていて、この状態ではエラーメッセージが表示されません。そこで、これを「On」に書き換えます。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2175" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-3/attachment/image-7-9/" data-orig-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-7.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-7" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-7.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-7.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-7.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2175" srcset="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-7.png?resize=1024%2C576&amp;ssl=1 1024w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-7.png?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-7.png?resize=768%2C432&amp;ssl=1 768w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-7.png?resize=1536%2C864&amp;ssl=1 1536w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-7.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>ファイルを保存したら、MAMPを再起動しましょう。右上の「Stop」ボタンを押して、「Start」ボタンを押します。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2176" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-3/attachment/image-8-9/" data-orig-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-8.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-8" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-8.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-8.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-8.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2176" srcset="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-8.png?resize=1024%2C576&amp;ssl=1 1024w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-8.png?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-8.png?resize=768%2C432&amp;ssl=1 768w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-8.png?resize=1536%2C864&amp;ssl=1 1536w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-8.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>これで設定が有効になります。先ほどのプログラムを再度実行すると、次のようにエラーメッセージが表示されます。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2177" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-3/attachment/image-9-9/" data-orig-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-9.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-9" data-image-description="" data-image-caption="" data-medium-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-9.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-9.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-9.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2177" srcset="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-9.png?resize=1024%2C576&amp;ssl=1 1024w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-9.png?resize=300%2C169&amp;ssl=1 300w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-9.png?resize=768%2C432&amp;ssl=1 768w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-9.png?resize=1536%2C864&amp;ssl=1 1536w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-9.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>これで開発がしやすくなります。</p>
+
+
+
+<h2>Windows版MAMPの場合</h2>
+
+
+
+<p>まずは、PHPの設定が記述された「php.ini」というファイルの場所を探しましょう。MAMPを起動したら、「Open WebStart page」ボタンをクリックします。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2179" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-3/attachment/image-10-9/" data-orig-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-10.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-10" data-image-description="" data-image-caption="" data-medium-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-10.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-10.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-10.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2179" srcset="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-10.png?resize=1024%2C576&amp;ssl=1 1024w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-10.png?resize=300%2C169&amp;ssl=1 300w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-10.png?resize=768%2C432&amp;ssl=1 768w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-10.png?resize=1536%2C864&amp;ssl=1 1536w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-10.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>画面上部の「phpInfo」メニューをクリックしましょう。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2180" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-3/attachment/image-11-9/" data-orig-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-11.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-11" data-image-description="" data-image-caption="" data-medium-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-11.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-11.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-11.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2180" srcset="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-11.png?resize=1024%2C576&amp;ssl=1 1024w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-11.png?resize=300%2C169&amp;ssl=1 300w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-11.png?resize=768%2C432&amp;ssl=1 768w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-11.png?resize=1536%2C864&amp;ssl=1 1536w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-11.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>すると、PHPの各種設定が一覧されるので、ここで「Loaded Configuration File」という行を探します。ここに、php.iniの場所が記載されています。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2181" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-3/attachment/image-12-9/" data-orig-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-12.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-12" data-image-description="" data-image-caption="" data-medium-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-12.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-12.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-12.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2181" srcset="https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-12.png?resize=1024%2C576&amp;ssl=1 1024w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-12.png?resize=300%2C169&amp;ssl=1 300w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-12.png?resize=768%2C432&amp;ssl=1 768w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-12.png?resize=1536%2C864&amp;ssl=1 1536w, https://i2.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-12.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>このファイルをエクスプローラーで開いて、エディター（VS Code）で編集しましょう。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2182" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-3/attachment/image-13-7/" data-orig-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-13.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-13" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-13.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-13.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-13.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2182" srcset="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-13.png?resize=1024%2C576&amp;ssl=1 1024w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-13.png?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-13.png?resize=768%2C432&amp;ssl=1 768w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-13.png?resize=1536%2C864&amp;ssl=1 1536w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-13.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>そしたら、ファイルの中から「display_errors」という設定項目を探します。「編集→検索」機能などを使って、検索するとよいでしょう。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2183" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-3/attachment/image-14-7/" data-orig-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-14.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-14" data-image-description="" data-image-caption="" data-medium-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-14.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-14.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-14.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2183" srcset="https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-14.png?resize=1024%2C576&amp;ssl=1 1024w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-14.png?resize=300%2C169&amp;ssl=1 300w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-14.png?resize=768%2C432&amp;ssl=1 768w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-14.png?resize=1536%2C864&amp;ssl=1 1536w, https://i1.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-14.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>なお、行の先頭に「;（セミコロン）」がある行はコメントで設定には影響がありません。セミコロンのない行を探します。</p>
+
+
+
+<p>この設定が現状ではoffになっているため、これを「on」に書き換えましょう。</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="2184" data-permalink="https://tomosta.jp/lessons/php-mysql/php2-3/attachment/image-15-7/" data-orig-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-15.png?fit=1920%2C1080&amp;ssl=1" data-orig-size="1920,1080" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-15" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-15.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-15.png?fit=1024%2C576&amp;ssl=1" loading="lazy" width="1024" height="576" src="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-15.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-2184" srcset="https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-15.png?resize=1024%2C576&amp;ssl=1 1024w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-15.png?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-15.png?resize=768%2C432&amp;ssl=1 768w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-15.png?resize=1536%2C864&amp;ssl=1 1536w, https://i0.wp.com/tomosta.jp/wp-content/uploads/2021/09/image-15.png?w=1920&amp;ssl=1 1920w" sizes="(max-width: 1000px) 100vw, 1000px" data-recalc-dims="1" /></figure>
+
+
+
+<p>そしたらファイルを保存して、MAMPを再起動します。「Stop Servers」をクリックして、「Start Servers」をクリックしましょう。</p>
+
+
+
+<p>これでエラーメッセージが表示されるようになります。</p>
+
+
+
+<p>エラーメッセージは英語の内容で、かつ間違えをそのまま教えてくれるわけではないため、少し慣れが必要です。Google検索やGoogle翻訳なども合わせて活用したら、少しずつ慣れていきましょう。</p>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2166</post-id>	</item>
+	</channel>
+</rss>
