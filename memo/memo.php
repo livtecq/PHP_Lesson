@@ -13,7 +13,8 @@
     if (!$stmt){
         die($db->error);
     }
-    $id = 11;
+    $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+    // $id = 11;
     $stmt->bind_param('i', $id);
     $stmt->execute();
 
