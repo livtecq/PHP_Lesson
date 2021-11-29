@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\DB;
 // 切り出した処理の使用
 use App\Services\CheckFormData;
 
+// カスタムバリデーションを読み込む
+use App\Http\Requests\StoreContactForm;
+
 class ContactFormController extends Controller
 {
     /**
@@ -54,7 +57,11 @@ class ContactFormController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+
+    // カスタムバリデーションを読み込む為に書き換える
+    public function store(StoreContactForm $request)
+    
+    // public function store(Request $request)
     {
         $contact = new ContactForm;
 
