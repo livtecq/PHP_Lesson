@@ -82,6 +82,39 @@ class ContactFormController extends Controller
     public function show($id)
     {
         //
+        $contact = ContactForm::find($id);
+        
+        if($contact->gender === 0){
+            $gender = '男性';
+        }
+        if($contact->gender === 1){
+            $gender = '女性';
+        }
+        if($contact->age === 0){
+            $age = '～19歳';
+        }
+        if($contact->age === 1){
+            $age = '20歳～29歳';
+        }
+        if($contact->age === 2){
+            $age = '30歳～39歳';
+        }
+        if($contact->age === 3){
+            $age = '40歳～49歳';
+        }
+        if($contact->age === 4){
+            $age = '50歳～59歳';
+        }
+        if($contact->age === 5){
+            $age = '60歳以上';
+        }
+
+
+        // dd($contact);
+
+        // compactは変数を複数渡すことが出来るので便利
+        return view('contact.show', 
+        compact('contact', 'gender', 'age'));
     }
 
     /**
@@ -93,6 +126,9 @@ class ContactFormController extends Controller
     public function edit($id)
     {
         //
+        $contact = ContactForm::find($id);
+
+        return view('contact.edit', compact('contact'));
     }
 
     /**

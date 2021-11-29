@@ -34,6 +34,7 @@
                                 <td>{{ $contact->your_name}}</td>
                                 <td>{{ $contact->title}}</td>
                                 <td>{{ $contact->created_at}}</td>
+                                <td><a href="{{ route('contact.show', ['id' => $contact->id ]) }}">詳細をみる</a></td>
                                 @endforeach
                             </tr>
                         </tbody>
