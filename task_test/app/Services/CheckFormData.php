@@ -16,22 +16,22 @@ class CheckFormData
     }
 
     public static function checkAge($data){
-        if($data->age === 0){
+        if($data->age === 1){
             $age = '～19歳';
         }
-        if($data->age === 1){
+        if($data->age === 2){
             $age = '20歳～29歳';
         }
-        if($data->age === 2){
+        if($data->age === 3){
             $age = '30歳～39歳';
         }
-        if($data->age === 3){
+        if($data->age === 4){
             $age = '40歳～49歳';
         }
-        if($data->age === 4){
+        if($data->age === 5){
             $age = '50歳～59歳';
         }
-        if($data->age === 5){
+        if($data->age === 6){
             $age = '60歳以上';
         }
         return $age;
