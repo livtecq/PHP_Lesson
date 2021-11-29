@@ -9,6 +9,9 @@ use App\Models\ContactForm;
 // クエリビルダで使用
 use Illuminate\Support\Facades\DB;
 
+// 切り出した処理の使用
+use App\Services\CheckFormData;
+
 class ContactFormController extends Controller
 {
     /**
@@ -83,31 +86,37 @@ class ContactFormController extends Controller
     {
         //
         $contact = ContactForm::find($id);
+
+        $gender = CheckFormData::checkGender($contact);
+        $age = CheckFormData::checkAge($contact);
         
-        if($contact->gender === 0){
-            $gender = '男性';
-        }
-        if($contact->gender === 1){
-            $gender = '女性';
-        }
-        if($contact->age === 0){
-            $age = '～19歳';
-        }
-        if($contact->age === 1){
-            $age = '20歳～29歳';
-        }
-        if($contact->age === 2){
-            $age = '30歳～39歳';
-        }
-        if($contact->age === 3){
-            $age = '40歳～49歳';
-        }
-        if($contact->age === 4){
-            $age = '50歳～59歳';
-        }
-        if($contact->age === 5){
-            $age = '60歳以上';
-        }
+
+        // ファットコントローラー 行数が多く処理の流れを追うことが難しくなること。
+        // 切り分ける app→新たにフォルダServicesを作成
+        // if($contact->gender === 0){
+        //     $gender = '男性';
+        // }
+        // if($contact->gender === 1){
+        //     $gender = '女性';
+        // }
+        // if($contact->age === 0){
+        //     $age = '～19歳';
+        // }
+        // if($contact->age === 1){
+        //     $age = '20歳～29歳';
+        // }
+        // if($contact->age === 2){
+        //     $age = '30歳～39歳';
+        // }
+        // if($contact->age === 3){
+        //     $age = '40歳～49歳';
+        // }
+        // if($contact->age === 4){
+        //     $age = '50歳～59歳';
+        // }
+        // if($contact->age === 5){
+        //     $age = '60歳以上';
+        // }
 
 
         // dd($contact);
@@ -157,6 +166,8 @@ class ContactFormController extends Controller
         $contact->save();
 
         return redirect('contact/index');
+
+
 
     }
 
