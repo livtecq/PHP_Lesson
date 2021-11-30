@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-12">
+        <div class="col-md-8">
             <div class="card">
                 <div class="card-header">Dashboard</div>
 
@@ -16,6 +16,13 @@
                     <form method="GET" action="{{ route('contact.create') }}">
                         <button type="submit" class="btn btn-primary">
                             新規登録 </button>
+                    </form>
+
+                    <!-- 検索フォーム -->
+                    <form method="GET" action="{{ route('contact.index') }}" class="form-inline my-2 my-lg-0">
+                        <input class="form-control me-2" name="search" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">検索する</button>
                     </form>
                     <table class="table">
                         <thead>
@@ -39,6 +46,7 @@
                             </tr>
                         </tbody>
                     </table>
+                    {{ $contacts->links() }}
                 </div>
             </div>
         </div>
