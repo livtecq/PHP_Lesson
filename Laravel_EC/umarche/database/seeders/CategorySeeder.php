@@ -31,22 +31,22 @@ class CategorySeeder extends Seeder
 
         DB::table('secondary_categories')->insert([
             [
-                'name' => '果菜類',
+                'name' => 'いちご',
                 'sort_order' => 1,
                 'primary_category_id' => 1
             ],
             [
-                'name' => '果物',
+                'name' => 'ぶどう',
                 'sort_order' => 2,
                 'primary_category_id' => 1
             ],
             [
-                'name' => 'いちご',
+                'name' => '牛肉',
                 'sort_order' => 3,
                 'primary_category_id' => 2
             ],
             [
-                'name' => 'ぶどう',
+                'name' => '豚肉',
                 'sort_order' => 4,
                 'primary_category_id' => 2
             ],
