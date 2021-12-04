@@ -31,7 +31,7 @@ class ItemController extends Controller
     {
         $products = Product::availableItems()
             ->sortOrder($request->sort)
-            ->get(); // 商品一覧ローカルスコープ
+            ->paginate($request->pagination); // 商品一覧ローカルスコープ
 
         // $stocks = DB::table('t_stocks')
         //     ->select(

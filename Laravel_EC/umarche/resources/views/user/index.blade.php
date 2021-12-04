@@ -37,11 +37,29 @@
                                 </option>
                             </select>
                         </div>
-                        <div>表示件数</div>
+                        <div>
+                            <span class="text-sm">表示件数</span><br>
+                            <select id="pagination" name="pagination">
+                                <option value="20"
+                                    @if(\Request::get('pagination') === '20')
+                                    selected
+                                    @endif>20件
+                                </option>
+                                <option value="50"
+                                    @if(\Request::get('pagination') === '50')
+                                    selected
+                                    @endif>50件
+                                </option>
+                                <option value="100"
+                                    @if(\Request::get('pagination') === '100')
+                                    selected
+                                    @endif>100件
+                                </option>
+                            </select>
+                        </div>
                     </div>
-                </form>
-            </div>
-        </div>
+                </div>
+            </form>
     </x-slot>
 
     <div class="py-12">
@@ -51,8 +69,8 @@
                   <div class="flex flex-wrap">
                     
                      @foreach($products as $product)
-                       <div class="w-1/4 p-2 md:p-4">
-                       <a href="{{ route('user.items.show', ['item' => $product->id])}}">
+                       <div class="w-full lg:w-1/4 p-2 md:p-4">
+                        <a href="{{ route('user.items.show', ['item' => $product->id ])}}">    
                        <div class="border rounded-md p-2 md:p-4">
                          <x-thumbnail filename="{{$product->filename ?? ''}}" type="products" />
                             <div class="mt-4">
@@ -66,10 +84,22 @@
                        @endforeach
                      
                      </div>
+                     {{ $products->appends([
+                        'sort' => \Request::get('sort'),
+                        'pagination' => \Request::get('pagination')
+                    ])->links() }}
                 </div>
             </div>
         </div>
     </div>
-
-
+<script>
+    const select = document.getElementById('sort')
+    select.addEventListener('change', function(){
+        this.form.submit()
+    })
+    const paginate = document.getElementById('pagination')
+    paginate.addEventListener('change', function(){
+        this.form.submit()
+    })
+</script>
 </x-app-layout>
