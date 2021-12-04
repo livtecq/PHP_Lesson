@@ -27,9 +27,11 @@ class ItemController extends Controller
         });
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::availableItems()->get(); // 商品一覧ローカルスコープ
+        $products = Product::availableItems()
+            ->sortOrder($request->sort)
+            ->get(); // 商品一覧ローカルスコープ
 
         // $stocks = DB::table('t_stocks')
         //     ->select(
